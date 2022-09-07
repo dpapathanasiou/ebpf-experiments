@@ -1,6 +1,6 @@
 # About
 
-These are my initial experiments in [eBPF](https://ebpf.io/), inspired by [Liz Rice](http://www.lizrice.com/)'s [Beginner's Guide to eBPF](https://github.com/lizrice/ebpf-beginners), using [BPF Compiler Collection (BCC)](https://github.com/iovisor/bcc) on a [Debian](https://www.debian.org/) image running in [VirtualBox](https://www.virtualbox.org/) (to prevent any accidental kernel damage)
+These are my initial experiments in [eBPF](https://ebpf.io/), inspired by [Liz Rice](http://www.lizrice.com/)'s [Beginner's Guide to eBPF](https://github.com/lizrice/ebpf-beginners), using [BPF Compiler Collection (BCC)](https://github.com/iovisor/bcc) on a [Debian](https://www.debian.org/) image running in [VirtualBox](https://www.virtualbox.org/) (to prevent any accidental kernel damage, even though the [eBPF verifier](https://docs.kernel.org/bpf/verifier.html) is supposed to protect against it)
 
 # Installation
 
