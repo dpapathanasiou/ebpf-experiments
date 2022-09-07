@@ -13,5 +13,5 @@ b.attach_kprobe(event=clone, fn_name="capture_uids")
 while True:
     sleep(2)
     for k,v in b["user_ids"].items():
-        print("ID {}:\t{}\n".format(k.value, v.value))
+        print("UID {}: {} times active".format(k.value, v.value))
 
