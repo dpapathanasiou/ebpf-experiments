@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 
 from bcc import BPF
+from pathlib import Path
 from time import sleep
 
-with open("echo_uid.c") as f:
-    program = f.read()
+program = Path.cwd() / 'echo_uid.c'
+with open(program, mode='r') as f:
+    program_text = f.read()
 
-b = BPF(text=program)
+b = BPF(text=program_text)
 clone = b.get_syscall_fnname("clone")
 b.attach_kprobe(event=clone, fn_name="capture_uids")
 
 while True:
     sleep(2)
-    for k,v in b["user_ids"].items():
-        print("UID {}: {} times active".format(k.value, v.value))
+    for uid, count in b["user_ids"].items():
+        print(f"UID {uid.value}: {count.value} count")
 
