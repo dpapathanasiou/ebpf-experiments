@@ -1,0 +1,1 @@
+Code in this folder uses [libbpf](https://github.com/libbpf/libbpf) for stand alone builds, rather than an eBPF framework such as [BPF Compiler Collection (BCC)](https://github.com/iovisor/bcc)
